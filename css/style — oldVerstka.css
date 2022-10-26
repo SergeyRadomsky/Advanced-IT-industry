@@ -1,0 +1,745 @@
+@charset "UTF-8";
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  align-items: center;
+  font-family: "Montserrat Medium", sans-serif;
+  font-size: 16px;
+  color: white;
+  background-color: #2b2b2b;
+  /*
+  background-image: url(image/image1.jpg);
+  background-repeat: no-repeat;
+   background-position: center;
+  */
+}
+
+.logo-box {
+  background-image: url(../image/image1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 100%;
+  min-height: 900px;
+}
+
+.MontserratRegular {
+  font-family: "Montserrat Regular", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+}
+
+.MontserratMedium {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.MontserratSemiBold {
+  font-family: "Montserrat SemiBold", sans-serif;
+  font-size: 18px;
+}
+
+.MontserratBold {
+  font-family: "Montserrat Bold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 53px;
+  text-align: center; /*
+.greetingText {}
+*/
+}
+
+.MontserratExtraBold {
+  font-family: "Montserrat ExtraBold", sans-serif;
+  font-size: 48px;
+}
+
+wrapper {
+  margin: auto;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+ul.navbar {
+  margin-top: 10px;
+  padding: 40px 0px;
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1103px;
+  margin: auto;
+}
+
+.line {
+  background: rgb(161, 161, 161);
+  border: none;
+  height: 1px;
+  max-width: 1920px;
+}
+
+.divCenter {
+  margin: auto;
+  max-width: 1103px;
+  align-items: center;
+}
+
+.navlink {
+  align-items: center;
+}
+.navlink .service {
+  padding-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96%;
+  height: 96%;
+}
+
+ol.navelem {
+  padding-right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.greetings {
+  min-height: 800px;
+  max-width: 830px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.greetings .greetingText {
+  /*
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+  */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 64px;
+  text-align: center;
+  text-align: center;
+  padding-bottom: 50px;
+  padding-top: 20px;
+}
+.greetings .oursProject {
+  background: rgb(73, 133, 255);
+  color: white;
+  background-color: #4985ff;
+  border: none;
+  border-radius: 30px;
+  padding: 13px 36px 15px 36px;
+}
+
+.mobileBox {
+  margin: auto;
+  max-width: 1920px;
+  background-color: white;
+  color: #2b2b2b;
+  margin-top: -10px;
+  overflow: hidden;
+  padding-top: 110px;
+  /*
+  background: rgb(80,77,194);
+  background: linear-gradient(90deg, rgba(80,77,194,1) 0%, rgba(0,65,255,1) 51%, rgba(9,9,121,1) 100%);
+  */
+}
+.mobileBox::after {
+  width: 50%;
+  height: 100%;
+  content: "";
+  display: inline-block;
+  background: red;
+}
+.mobileBox::before {
+  width: 100%;
+  height: 100%;
+  background: blue;
+  display: inline-block;
+}
+
+.secondPalte {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobileGreet {
+  margin-bottom: 50px;
+}
+
+.mobileGreetMini {
+  font-family: "Montserrat", sans-serif;
+  color: grey;
+  margin-bottom: 70px;
+}
+
+.makeSiteFlex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.boxwithmake {
+  min-height: 140px;
+  display: flex;
+}
+
+.cl {
+  border: 1px solid #E0E0E0;
+  margin: 0;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  color: #2b2b2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 17px;
+}
+
+.cll {
+  border: 1px solid #4985FF;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  color: #2b2b2b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cll > img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*стиль кнопки*/
+.oursProject {
+  background: rgb(73, 133, 255);
+  color: white;
+  background-color: #4985ff;
+  border: none;
+  border-radius: 30px;
+  padding: 13px 36px 15px 36px;
+  align-items: center;
+}
+
+.btnCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 55px;
+}
+
+.block {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin-left: 18px;
+  max-width: 226px;
+}
+
+.text1 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  margin-bottom: 12px;
+}
+
+.buttonAllServAICenter {
+  margin-top: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 105px;
+}
+
+.highStandart {
+  background-color: #f6f6f8;
+  max-width: 1920px;
+  min-height: 500px;
+  margin: auto;
+}
+.highStandart .divCenter .blockTextPhoto {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 100px;
+  padding-bottom: 90px;
+  border-bottom: 1px solid #E0E0E0;
+}
+.highStandart .divCenter .blockTextPhoto .blockText {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 490px;
+}
+.highStandart .divCenter .blockTextPhoto .blockText .highStandartBigText {
+  color: #323232;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 53px;
+  color: #2b2b2b;
+}
+.highStandart .divCenter .blockTextPhoto .blockText .highStandartMiniText {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: #999999;
+  margin-bottom: 30px;
+}
+.highStandart .divCenter .blockTextPhoto .blockText .moreInform > a {
+  color: blue;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: underline;
+}
+.highStandart .divCenter .blockTextPhoto .imageHighStandart {
+  overflow: hidden;
+  border-radius: 30px;
+  height: 100%;
+}
+.highStandart .divCenter .blockTextPhoto .imageHighStandart > img {
+  height: 400px;
+  width: 550px;
+  margin: -30px -30px -30px 0px;
+}
+.highStandart .divCenter .blockOurProjs {
+  display: flex;
+  justify-content: space-around;
+}
+.highStandart .divCenter .blockOurProjs:first-child {
+  margin-left: 30px;
+}
+.highStandart .divCenter .blockOurProjs .blockOurProjCenter {
+  width: 104px;
+  height: 67px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+.highStandart .divCenter .blockOurProjs .blockOurProjCenter .ourProj {
+  display: flex;
+  justify-content: space-between;
+}
+.highStandart .divCenter .blockOurProjs .blockOurProjCenter .ourProj > img {
+  height: 30px;
+  width: 30px;
+  margin-left: 10px;
+}
+.highStandart .divCenter .blockOurProjs .blockOurProjCenter .ourProj .numBer {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 33px;
+  color: #000000;
+  margin-right: 25px;
+  margin-left: 10px;
+}
+.highStandart .divCenter .blockOurProjs .blockOurProjCenter .projText {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: #999999;
+}
+
+.ourWorksAndSpecial {
+  background-color: #f6f6f8;
+  max-width: 1920px;
+  min-height: 1000px;
+  margin: auto;
+  background: linear-gradient(0deg, #fff 50%, #504DC2 50%, #5F12D0 50%), #C4C4C4;
+}
+.ourWorksAndSpecial .divCenter {
+  padding-bottom: 85px;
+  border-bottom: 1px solid #E0E0E0;
+}
+.ourWorksAndSpecial .divCenter .ourWorkTextButton {
+  padding-top: 100px;
+  padding-bottom: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ourWorksAndSpecial .divCenter .ourWorkTextButton .ourWorkText {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 53px;
+  color: #FFFFFF;
+}
+.ourWorksAndSpecial .divCenter .boxESImgResearcheS {
+  display: flex;
+  justify-content: space-between;
+}
+.ourWorksAndSpecial .divCenter .boxESImgResearcheS .boxImgReserch .computerPeople {
+  border-radius: 30px;
+}
+.ourWorksAndSpecial .divCenter .boxESImgResearcheS .boxImgReserch .blockTextS {
+  margin-top: 30px;
+  max-width: 300px;
+}
+.ourWorksAndSpecial .divCenter .boxESImgResearcheS .boxImgReserch .blockTextS .reserchLogoText {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  margin-bottom: 30px;
+}
+.ourWorksAndSpecial .divCenter .boxESImgResearcheS .boxImgReserch .blockTextS .reserchLogoText::before {
+  content: "01.";
+  color: #4985FF;
+}
+.ourWorksAndSpecial .divCenter .boxESImgResearcheS .boxImgReserch .blockTextS .textLorem {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: #999999;
+  margin-bottom: 30px;
+}
+.ourWorksAndSpecial .divCenter .boxESImgResearcheS .boxImgReserch .blockTextS > a {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration-line: underline;
+  color: #4985FF;
+}
+
+.typeBox2 .secondPalte .makesideRowFlex .makeSite .makeSiteFlex {
+  min-width: 1103px;
+  display: flex;
+  justify-content: space-between;
+}
+.videoBox {
+  background-color: #f6f6f8;
+  max-width: 1920px;
+  min-height: 1000px;
+  margin: auto;
+  background: linear-gradient(0deg, #fff 43%, rgba(255, 255, 255, 0.15) 20%), url(../image/gragientImg.jpg) no-repeat;
+}
+.videoBox .divCenter {
+  background-repeat: no-repeat;
+  padding-bottom: 85px;
+  border-bottom: 1px solid #E0E0E0;
+}
+.videoBox .divCenter .ourWorkTextButton {
+  padding-top: 100px;
+  padding-bottom: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.videoBox .divCenter .ourWorkTextButton .ourWorkText {
+  padding-bottom: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 53px;
+  color: #FFFFFF;
+}
+.videoBox .divCenter .ourWorkTextButton .oursProject2 {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.videoBox .divCenter .boxESImgResearcheS {
+  display: flex;
+  justify-content: center;
+}
+.videoBox .divCenter .boxESImgResearcheS .boxImgReserch .computerPeople {
+  border-radius: 30px;
+}
+.videoBox .divCenter .boxESImgResearcheS .boxImgReserch .blockTextS {
+  margin-top: 30px;
+  max-width: 300px;
+}
+.videoBox .divCenter .boxESImgResearcheS .boxImgReserch .blockTextS .reserchLogoText {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  margin-bottom: 30px;
+}
+.videoBox .divCenter .boxESImgResearcheS .boxImgReserch .blockTextS .reserchLogoText::before {
+  content: "01.";
+  color: #4985FF;
+}
+.videoBox .divCenter .boxESImgResearcheS .boxImgReserch .blockTextS .textLorem {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: #999999;
+  margin-bottom: 30px;
+}
+.videoBox .divCenter .boxESImgResearcheS .boxImgReserch .blockTextS > a {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration-line: underline;
+  color: #4985FF;
+}
+
+.videoWork .divCenter {
+  margin-top: -100px;
+  max-width: 1920px;
+  align-items: center;
+}
+.videoWork .divCenter .d7 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 1103px;
+  background-color: #FFFFFF;
+}
+.videoWork .divCenter .d7 .spam {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 20px;
+}
+.videoWork .divCenter .d7 .divForm {
+  margin-bottom: 35px;
+  height: 45px;
+}
+.videoWork .divCenter .d7 .divForm form {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: auto;
+  float: right;
+  margin-right: 30px;
+}
+.videoWork .divCenter .d7 .divForm form input {
+  width: 350px;
+  height: 42px;
+  padding-left: 20px;
+  border-radius: 42px 0 0 42px;
+  outline: none;
+  position: relative;
+  transition: 0.3s linear;
+  box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+  border: none;
+}
+.videoWork .divCenter .d7 .divForm form button {
+  color: #FFFFFF;
+  background-color: #4985ff;
+  min-width: 190px;
+  height: 42px;
+  border: none;
+  top: -2px;
+  right: 0;
+  border-radius: 0 42px 42px 0;
+  box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+}
+.videoWork .divCenter .d7 .greyText {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+  color: #999999;
+  margin-bottom: 30px;
+}
+.videoWork .divCenter .d7 .greyTextMini {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 21px;
+  text-align: center;
+  color: #999999;
+  margin-bottom: 85px;
+}
+
+.lastBox {
+  width: 1920px;
+  margin: auto;
+  height: auto;
+  background: #F6F6F8;
+}
+.lastBox .divCenter {
+  max-width: 1103px;
+  border-bottom: 1px solid #E0E0E0;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 70px;
+}
+.lastBox .divCenter .textBlockEndOl .olTextLogo {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+.lastBox .divCenter .textBlockEndOl .olElements {
+  margin-top: 30px;
+}
+.lastBox .divCenter .textBlockEndOl .olElements > li.rowLi {
+  list-style-image: url(../image/rowLi.png);
+}
+.lastBox .divCenter .textBlockEndOl .olElements > li {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #999999;
+  list-style-position: inside;
+  margin-bottom: 27px;
+}
+.lastBox .divCenter .textBlockEndOl .olElements > li.smsBox {
+  list-style-image: url(../image/sms.png);
+}
+.lastBox .divCenter .textBlockEndOl .olElements > li.callBox {
+  list-style-image: url(../image/call.png);
+}
+.lastBox .divCenter .textBlockEndOl .olElements > li.placeBox {
+  list-style-image: url(../image/place.png);
+}
+.lastBox .divCenter .ourRight {
+  border-top: 1px solid #E0E0E0;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: grey;
+  list-style-position: inside;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lastBox .divCenter .ourRight .ourRightText {
+  padding: 30px;
+}
+
+/*# sourceMappingURL=style%20%E2%80%94%20oldVerstka.css.map */
