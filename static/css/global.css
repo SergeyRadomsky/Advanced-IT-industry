@@ -37,7 +37,7 @@
   --color-gray3: #F6F6F8;
   --color-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
   --font-Montserrat: "Montserrat",sans-serif;
-  --container-width: 1366px;
+  --container-width: calc(100vh - 40px);
   --line-height: 1;
 
 }
@@ -90,4 +90,28 @@ a {
   color: inherit;
 }
 
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 53px;
+}
+
+.button{
+    display: block;
+    margin: 0 auto;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    width: 200px;
+    height: 45px;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 13px 36px 15px 36px;
+    border-radius: 30px;
+    box-shadow: var(--color-shadow);
+}
 /*# sourceMappingURL=nullstyle.css.map */
