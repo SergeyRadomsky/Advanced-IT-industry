@@ -51,6 +51,13 @@
   display: flex;
   color: var(--color-white);
   margin: 0 20px;
+  border-bottom: 1px solid transparent;
+}
+.navigation__link:active {
+  border-bottom: 1px solid var(--color-white);
+}
+.navigation__link:hover {
+  border-bottom: 1px solid var(--color-white);
 }
 
 .navigation__link_active {
@@ -65,7 +72,7 @@
 .hero-block_background {
   background: url("../images/Rectangle-new.jpg") center no-repeat;
   background-size: cover;
-  height: 900px;
+  height: 909px;
 }
 
 .hero-block__content {
@@ -92,7 +99,6 @@
   font-size: 16px;
   margin-bottom: 17px;
   margin-top: 82px;
-  padding-left: 10px;
   line-height: calc(1.1 * var(--line-height));
 }
 
@@ -100,7 +106,6 @@
   font-weight: 800;
   font-size: 48px;
   margin-bottom: 35px;
-  padding-left: 5px;
   line-height: calc(1.33 * var(--line-height));
 }
 
@@ -118,7 +123,7 @@
 }
 
 .services__content {
-  padding-top: 110px;
+  padding-top: 98px;
   padding-bottom: 105px;
   background-color: var(--color-white);
 }
@@ -135,7 +140,7 @@
 }
 
 .services__title {
-  padding-bottom: 30px;
+  margin-bottom: 33px;
   font-weight: 700;
   font-size: 36px;
   line-height: 53px;
@@ -241,6 +246,7 @@
 }
 
 .high-standards-content {
+  padding-top: 100px;
   background-color: var(--color-gray3);
 }
 
@@ -249,17 +255,15 @@
 }
 
 .high-standards__body {
+  padding-bottom: 88px;
   display: flex;
   flex: 0 1 50%;
   justify-content: space-between;
-  padding-top: 100px;
-  padding-bottom: 88px;
   border-bottom: 1px solid var(--color-gray1);
 }
 
 .high-standards_head_text {
   margin-top: 47px;
-  margin-left: 9px;
   max-width: 500px;
   flex: 0 1 50%;
 }
@@ -268,7 +272,7 @@
   margin-bottom: 24px;
 }
 
-._title {
+.title {
   font-weight: 700;
   font-size: 36px;
   line-height: 53px;
@@ -287,7 +291,6 @@
 }
 
 .high-standards__block-image {
-  margin-right: -8px;
   object-fit: cover;
   min-width: 500px;
   min-height: 400px;
@@ -306,7 +309,7 @@
 }
 
 .high-standards__footer {
-  margin: 70px 0 0 95px;
+  margin: 70px 0 0 87px;
 }
 
 .high-standards__row {

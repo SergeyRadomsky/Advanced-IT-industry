@@ -9,20 +9,13 @@
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    //overflow: auto;
     overflow-x: hidden;
 }
 
 .header {
     overflow: visible;
-    //position: fixed;
-    //top: 0;
-    //left: 0;
-    //z-index: 1;
-    //margin-bottom: -116px;
     width: 100%;
     border-bottom: 1px solid var(--color-white);
-    //margin-bottom: 118px;
 }
 
 .header__container {
@@ -31,10 +24,6 @@
 
 .container {
     max-width: 1110px;
-    //min-height: 100px;
-    //min-height: calc var(--container-width);
-    //padding-left: calc(50% - var(--container-width))!important;
-    //padding-right: calc(50% - var(--container-width))!important;
     margin: 0 auto;
 }
 
@@ -54,8 +43,6 @@
     display: flex;
     justify-content: flex-end;
     height: 100%;
-    //padding: ;
-    //width: 583px;
 
     &>li:last-child {
         margin-right: 0;
@@ -68,12 +55,16 @@
     display: flex;
     color: var(--color-white);
     margin: 0 20px;
+    border-bottom: 1px solid transparent;
 
-}
-    a.navigation__link:first-of-type {
-        //padding: 10px;
-        //font-weight: bold;
+    &:active {
+    border-bottom: 1px solid var(--color-white);
     }
+    &:hover {
+    border-bottom: 1px solid var(--color-white);
+    }
+}
+
 
 .navigation__link_active {
     border-bottom: 1px solid var(--color-white);
@@ -87,22 +78,16 @@
 .hero-block_background{
     background: url("../images/Rectangle-new.jpg") center no-repeat;
     background-size: cover;
-    height: 900px;
-
+    height: 909px;
 }
 
 .hero-block__content {
     position: relative;
     width: 100%;
-    //min-height: 900px;
     margin-top: 138px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.hero-block__container {
-    //margin-bottom: 210px;
 }
 
 .hero-block__body {
@@ -120,28 +105,14 @@
     font-size: 16px;
     margin-bottom: 17px;
     margin-top: 82px;
-    padding-left: 10px;
     line-height: calc(1.1 * var(--line-height));
 }
 
 .hero-block__undertitle {
     font-weight: 800;
     font-size: 48px;
-    //margin-top: 20px;
     margin-bottom: 35px;
-    padding-left: 5px;
     line-height: calc(1.33 * var(--line-height));
-}
-
-.hero-block__button {
-    //display: block;
-    //margin-bottom: 0px;
-    //margin-top: 100px;
-    //padding: 40px;
-    //margin-left: 16px;
-    //height: 0;
-    //padding-bottom: 60px;
-
 }
 
 .button{
@@ -158,7 +129,7 @@
 }
 
 .services__content {
-    padding-top: 110px;
+    padding-top: 98px;
     padding-bottom: 105px;
     background-color: var(--color-white);
 }
@@ -169,7 +140,6 @@
 }
 
 .services_head_text {
-    //width: calc(740px * var((--container-width) / (--container-width)));
     max-width: 740px;
     margin-left: auto;
     margin-right: auto;
@@ -178,7 +148,7 @@
 }
 
 .services__title {
-    padding-bottom: 30px;
+    margin-bottom: 33px;
     font-weight: 700;
     font-size: 36px;
     line-height: 53px;
@@ -188,7 +158,6 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 25px;
-    //padding-bottom: 70px;
 }
 
 .service__templates {
@@ -201,12 +170,10 @@
 }
 
 .service__row {
-    //padding-bottom: 55px;
     line-height: calc(1.33 * (var(--line-height)));
     margin-bottom: 18px;
     font-weight: 400;
     font-size: 16px;
-    //line-height: 25px;
     display: flex;
     justify-content:  space-around;
     flex-wrap: wrap;
@@ -258,8 +225,6 @@
 .img-services {
     position: relative;
     top: 0;
-    //width: 80%;
-    //height: 80%;
     flex:  0 0 40px;
 }
 
@@ -288,6 +253,8 @@
 }
 
 .high-standards-content {
+    padding-top: 100px;
+    //padding-bottom: 88px;
     background-color: var(--color-gray3);
 }
 .high-standards__container {
@@ -295,29 +262,24 @@
 }
 
 .high-standards__body {
-    display: flex;
-        flex: 0 1 50%;
-    justify-content: space-between;
-        //max-width: 500px;
-    //font-weight: 700;
-    padding-top: 100px;
     padding-bottom: 88px;
+    display: flex;
+    flex: 0 1 50%;
+    justify-content: space-between;
     border-bottom: 1px solid var(--color-gray1);
 }
-// тут топовые стили для текст(для след элементов)////////////////////////////////////////////////////////////////
+
 .high-standards_head_text {
     margin-top: 47px;
-    margin-left: 9px;
     max-width: 500px;
     flex: 0 1 50%;
-
 }
 
 .high-standards__title {
     margin-bottom: 24px;
 }
 
-._title {
+.title {
     font-weight: 700;
     font-size: 36px;
     line-height: 53px;
@@ -327,14 +289,12 @@
     margin-bottom: 25px;
     line-height: 25px;
 }
-._text {}
 .high-standards__link {
     display:block;
     text-decoration: underline;
     color: var(--color-blue);
 }
 .high-standards__block-image {
-    margin-right: -8px;
     object-fit: cover;
     min-width: 500px;
     min-height: 400px;
@@ -353,26 +313,18 @@
 }
 
 .high-standards__footer {
-    //padding: 70px 0 66px 0;
-    margin: 70px 0 0 95px;
-    //margin-left: 95px;
+    margin: 70px 0 0 87px;
 }
 
 .high-standards__row {
     margin-top: 72px;
     display: flex;
     flex-direction: row;
-    //justify-content: center;
     flex-wrap: wrap;
 
     &>li:last-child {
         margin-right: 0;
     }
-}
-
-
-.column-elements {
-    //margin-right: 92px;
 }
 
 .column-elements__top {
@@ -402,5 +354,4 @@
 
 .column-elements__bottom {
     display: flex;
-    //margin-left: 3px;
 }
